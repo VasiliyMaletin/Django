@@ -1,0 +1,8 @@
+INFO	2023-12-03 19:12:57,502	autoreload	4524	19816	Watching for file changes with StatReloader
+INFO	2023-12-03 19:13:00,103	views	4524	20152	The view function was called index
+INFO	2023-12-03 19:13:00,104	basehttp	4524	20152	"GET / HTTP/1.1" 200 13
+INFO	2023-12-03 19:13:19,224	basehttp	4524	20152	"GET /main HTTP/1.1" 301 0
+INFO	2023-12-03 19:13:19,230	views	4524	20644	The view function was called main
+INFO	2023-12-03 19:13:19,231	basehttp	4524	20644	"GET /main/ HTTP/1.1" 200 345
+INFO	2023-12-03 19:13:28,435	views	4524	20644	The view function was called about
+INFO	2023-12-03 19:13:28,436	basehttp	4524	20644	"GET /about/ HTTP/1.1" 200 107
