@@ -4,11 +4,15 @@
 
 {% block content %}
     <h2>Все заказы пользователя: {{ user.name }}</h2>
-    {% for order in orders %}
-        <h1>Order</h1>
+    {% for order, list_products in products.items %}
+        <h1>Order {{ order.id }}</h1>
         <p>{{ order.date_ordered }}</p>
         <p>{{ order.total_price }}</p>
         <h3>Products</h3>
-        <p>{{ products.pop }}</p>
+        {% for product in list_products %}
+            <p>
+                {{ product.name }} – {{ product.description }}, {{ product.price }}, {{ product.quantity }}
+            </p>
+        {% endfor %}
     {% endfor %}
 {% endblock %}
