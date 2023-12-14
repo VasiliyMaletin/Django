@@ -8,13 +8,13 @@ def index(request):
 
 
 def cart(request, user_id: int):
-    products = []
+    products = {}
     user = User.objects.filter(pk=user_id).first()
     orders = Order.objects.filter(customer=user).all()
     for order in orders:
-        products.append(order.products.all())
-    products.reverse()
-    return render(request, 'app_3/all_orders.html', {'user': user, 'orders': orders, 'products': products})
+        products[order] = order.products.all()
+    print(products)
+    return render(request, 'app_3/all_orders.html', {'user': user, 'products': products})
 
 
 def sort_cart(request, user_id: int, days_ago: int):
