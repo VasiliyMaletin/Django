@@ -28,7 +28,7 @@ DEBUG = False
 
 ALLOWED_HOSTS = [
     '127.0.0.1',
-    'droneshop38.pythonanywhere.com'
+    'droneshop38.pythonanywhere.com',
 ]
 
 SESSION_COOKIE_SECURE = True
@@ -85,14 +85,14 @@ WSGI_APPLICATION = 'project.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'droneshop38$project6',
+        'NAME': 'droneshop38$default',
         'USER': 'droneshop38',
         'PASSWORD': os.getenv('MYSQL_PASSWORD'),
         'HOST': 'droneshop38.mysql.pythonanywhere-services.com',
         'OPTIONS': {
-            'init_command': "SET NAMES 'utf8mb4'; SET sql_mode='STRICT_TRANS_TABLES'",
+            'init_command': "SET NAMES 'utf8mb4';SET sql_mode='STRICT_TRANS_TABLES'",
             'charset': 'utf8mb4',
-        }
+        },
     }
 }
 
